@@ -1,0 +1,120 @@
+@import "var";
+
+html, body{
+	height: 100%;
+}
+
+img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+.page{
+    -webkit-font-smoothing: antialiased;
+    
+    font-weight: 300;
+    color: @c-black;
+    background-color: @c-white;
+
+    &__inner{
+        max-width: 1280px;
+        min-width: 1280px;
+        box-shadow: 0px 15px 35px -10px rgba(0,0,0,0.75);
+        margin: 0 auto;
+        min-height: 100%;
+
+    }
+
+    
+    &__footer{
+        
+        
+    }
+    &__container{
+        background: linear-gradient(270deg, #f4f7f6 290px, #fff 290px, #fff 990px, #f4f7f6 990px)
+    }
+}
+
+input, textarea, keygen, select, button {
+    
+}
+
+.container{
+    min-width: 1280px;
+    max-width: 1280px;
+    padding: 0px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    min-height: 100px;
+    clear: both;
+
+    
+}
+
+.hide{
+    display: none;
+}
+
+a{
+    color: @c-link;
+    text-decoration: none;
+
+    &:hover{
+        
+    }
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6{
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+h1, .h1{
+    
+}
+
+h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
+   
+}
+
+p{
+    margin-bottom: 1em;
+}
+
+.text{
+    padding-top: 30px;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+.clearfix {
+    zoom:1; /* Хак для IE 6 и 7 */
+}
+.button{
+    background: #f2edd1;
+    border-radius: 15px;
+    font-family: @c-ffamaly;
+    box-shadow: inset 0px -8px 22px -4px rgba(201,199,201,1);
+    border-width: 1px ;
+    border-color: #fff;
+    border-style: solid;
+    color: #00776f; 
+    margin-bottom: 5px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    &:hover{
+        box-shadow: none;
+        color: #fff;
+        background: linear-gradient(#00615a 0%, #00756d 70%, #005751 100%);    
+        border-color: transparent;
+    }
+}

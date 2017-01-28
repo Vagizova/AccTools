@@ -1,0 +1,241 @@
+@import "var";
+
+.header{
+	position: relative;
+	overflow: hidden;
+	min-width: 990px;
+    overflow: visible;
+
+}
+.docked{
+	background-image: url(.//images/head.png);
+	display: flex;
+	align-items: center;
+	justify-content:space-between;
+	padding: 20px 40px 50px 0px;
+	clear: both;
+
+	
+	&__list{
+		position: relative;
+		padding: 0 20px;
+		display: flex;
+		margin: 0px;
+	}
+	&__item{
+		white-space: nowrap;
+	}
+	&__item:hover a{
+		text-decoration: underline;
+	}
+	&__item a{
+		text-decoration: none;
+		font-family: @c-ffamaly;
+		color: #fff;
+		font-size: 12px;
+	}
+	&__icon{
+		padding: 0 5px 0 20px;
+	}
+}
+.unit{
+	width: 570px;
+	height: 40px;
+	background: white;
+}
+.link{
+	white-space: nowrap;
+    font-family: @c-ffamaly;
+    color: #fff;
+    font-size: 12px;
+    background: linear-gradient(#00615a 0%, #00756d 70%, #005751 100%);
+    padding: 7px 25px;
+    border-radius: 7px;
+}
+.panel{
+	
+	box-shadow:
+        0px -10px 0px 0px #00776f,
+        0px 10px 0px 0px #ffebb2;
+    background: linear-gradient(to top, #f0cb86 -10%, #f5edd5 15%, #f5edd5 60%, #e7e7e6 100%);
+    padding: 30px 0;
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.search, .select{
+	background: #f2edd1;
+	position: relative;
+	width: 640px;
+	height: 40px;
+	float: left;
+	margin-bottom: 20px;
+	border-radius: 15px;
+}
+	.row{
+		border-radius: 15px;
+		border: none;
+		position: absolute;
+		top: 0px;
+		padding: 10px 30px;
+		box-shadow: inset 0px -8px 22px -4px rgba(201,199,201,1);
+		
+
+	&-button{
+    	position: absolute;
+   		right: 0;
+    	border-radius: 0 15px 15px 0;
+    	height: 40px;
+    	width: 30px;
+    	border: none;
+    	background: #f2edd1;
+    		
+    	box-shadow: inset 0px -8px 22px -4px rgba(201,199,201,1);	
+    	
+    	padding: 0;
+	}
+}
+.search{
+	&__row{
+		height: 40px;
+		width: 100%;
+		border-width: 1px 0 1px 1px ;
+    	border-color: #fff;
+    	border-style: solid; 
+	
+		&-button{
+			background-image: url(.//images/search.png);
+			background-repeat: no-repeat;
+	    	background-position: center;
+	    	border-width: 1px 1px 1px 0;
+    	border-color: #fff;
+    	border-style: solid; 
+		}
+	}
+}
+.select{
+	&__row{
+		height: 40px;
+		width: 100%;
+		border-width: 1px 0 1px 1px ;
+    	border-color: #ccc;
+    	border-style: solid; 
+
+		&-button{
+			background-image: url(.//images/select.png);
+			background-repeat: no-repeat;
+	    	background-position: center;
+	    	border-width: 1px 1px 1px 0;
+    	border-color: #ccc;
+    	border-style: solid; 
+		}
+	}
+}
+/*form{
+	
+}
+*/
+
+.enter{
+	margin-left: 80px;
+    display: inline-block;
+    position: absolute;
+    color: #00776f; 
+    text-align: center;
+
+	&__button{
+		
+		height: 40px;
+		width: 125px;
+		line-height: 40px;
+    	text-transform: uppercase;
+    	background-image: url(.//images/enter.png);
+    	background-repeat: no-repeat;
+    	background-position: 90%;	
+   	}
+    &__check-in{
+    	color: #00776f; 
+    	text-decoration: underline;
+    	font-family: @c-ffamaly;
+    	font-size: 12px;
+    }
+}
+.logo{
+	float: left;
+    width: 280px;
+    height: 90px;
+    position: relative;
+    margin: -10px 40px;
+
+	&__image{
+		max-height: 90px;
+	}
+}
+.horizontal-menu{
+	margin-top: -30px;
+
+	&__list{
+		position: relative;
+		padding: 0 40px;
+		display: flex;
+		justify-content:space-between;
+		margin: 0px;
+	}
+
+	&__item{
+		cursor: pointer;
+		padding: 5px 10px 5px 10px;
+		background: #f4f2ed;
+		width: 175px;
+		text-align: center;
+		line-height: 1;
+		font-weight: bold;
+		height: 30px;	
+		display: flex;
+		align-items: center;
+		justify-content:center;
+	}
+	&__item a{
+		text-decoration: none;
+		font-family: @c-ffamaly;
+		color: #00776f;
+		font-size: 12px;
+	}
+	.list_top &__item{
+		border-radius: 3px 3px 0 0;
+	}
+	.list_down &__item{
+		border-radius: 0 0 3px 3px;
+		
+	}
+	&__item:hover {
+		background:  linear-gradient(#00615a 0%, #00756d 70%, #005751 100%);
+
+	}
+	&__item:hover a{
+		color: #fff;
+	}
+}
+
+.horizontal-menu_header:after{
+	content: "";
+	background-image: url(.//images/person2.png);
+	background-repeat: no-repeat;
+	width: 150px;
+	height: 175px;
+	position: absolute;
+	top: 70px;
+	right: -92px;
+}
+    .horizontal-menu_header:before{
+    content: "";
+    background-image: url(.//images/person1.png);
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 200px;
+    position: absolute;
+    top: 180px;
+    z-index: 1;
+    left: -87px;
+}
