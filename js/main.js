@@ -1,4 +1,11 @@
 $(document).ready(function() {
-	console.log("111");
+	$('.accordion').accordion({
+		collapsible: true,    
+		active: false,     
+	});
+	$('.directory').accordion({
+		collapsible: true,    
+		active: false,     
+	});
 	
 });

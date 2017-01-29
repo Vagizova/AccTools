@@ -184,23 +184,23 @@
 	}
 
 	&__item{
-		cursor: pointer;
-		padding: 5px 10px 5px 10px;
 		background: #f4f2ed;
-		width: 175px;
-		text-align: center;
-		line-height: 1;
-		font-weight: bold;
-		height: 30px;	
-		display: flex;
-		align-items: center;
-		justify-content:center;
+		width: 195px;
 	}
 	&__item a{
 		text-decoration: none;
 		font-family: @c-ffamaly;
 		color: #00776f;
 		font-size: 12px;
+		display: block;
+		padding: 5px 10px 5px 10px;
+		height: 30px;
+		text-align: center;
+		line-height: 1;
+		font-weight: bold;
+		display: flex;
+		align-items: center;
+		justify-content:center;
 	}
 	.list_top &__item{
 		border-radius: 3px 3px 0 0;
@@ -209,11 +209,8 @@
 		border-radius: 0 0 3px 3px;
 		
 	}
-	&__item:hover {
+	&__item a:hover {
 		background:  linear-gradient(#00615a 0%, #00756d 70%, #005751 100%);
-
-	}
-	&__item:hover a{
 		color: #fff;
 	}
 }

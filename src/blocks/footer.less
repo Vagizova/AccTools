@@ -1,8 +1,8 @@
 @import "var";
 
 .footer{
-	height: 100px;
-	margin-top: -100px;
+	height: 230px;
+	margin-top: -230px;
 	box-sizing: border-box;
 	clear: both;
 	padding-top: 30px;
@@ -19,6 +19,32 @@
 		display: inline-block;
 		vertical-align: top;
 	}
+
+	&__container{
+		box-shadow: 
+			0px 0px 35px -10px rgba(0,0,0,0.75);
+	}
+
+	&:before{
+		content: "";
+		background-image: url(.//images/person3.png);
+		background-repeat: no-repeat;
+		width: 150px;
+		height: 175px;
+		position: absolute;
+		bottom: 110px;
+	    left: 300px;
+	}
+	&:after{
+		content: "";
+		background-image: url(.//images/person4.png);
+		background-repeat: no-repeat;
+		width: 160px;
+		height: 190px;
+		position: absolute;
+		bottom: 86px;
+	    right: 300px;
+	}
 }
 .docked_footer{
 	margin-top: -30px;
@@ -30,10 +56,6 @@
         0px -10px 0px 0px #ffebb2,
         0px 10px 0px 0px #00776f;
         margin-bottom: 0px;
-}
-.footer__container{
-	box-shadow: 
-		0px 0px 35px -10px rgba(0,0,0,0.75);
 }
 .panel-list{
 	float: left;
@@ -89,25 +111,4 @@
 		max-width: 12px;
     	max-height: 12px;
 	}
-}
-.footer:before{
-	content: "";
-	background-image: url(.//images/person3.png);
-	background-repeat: no-repeat;
-	width: 150px;
-	height: 175px;
-	position: absolute;
-	bottom: 110px;
-    left: 300px;
-	
-	}
-	.footer:after{
-	content: "";
-	background-image: url(.//images/person4.png);
-	background-repeat: no-repeat;
-	width: 160px;
-	height: 190px;
-	position: absolute;
-	bottom: 86px;
-    right: 300px;
 }
