@@ -1,0 +1,27 @@
+
+{% set newart = [
+    {"title": "Полезные сервисы для бухгалтеров", "link": "/"
+    },
+    {"title": "Особенности учета по видам деятельности", "link": "/"
+    },
+    {"title": "Формы документов и образцы заполнения", "link": "/"
+    },
+    {"title": "Полезные сервисы для бухгалтеров", "link": "/"
+    },
+    {"title": "Особенности учета по видам деятельности", "link": "/"
+    },
+    {"title": "Полезные сервисы для бухгалтеров", "link": "/"
+    }
+]%}
+<div class="block">
+    <h3><img src="/images/pen.png">Новые статьи</h3>
+    <div class="list-objects">
+    
+        <ul class="list-objects__catalog catalog">
+        {% for item in newart %}
+            <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul>
+        
+    </div>
+</div>

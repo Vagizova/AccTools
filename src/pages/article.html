@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% set title = "" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% set breadcrumbs = [
+	{"link": "/", "title": "Главная"},
+	{"link": "/","title": "Полезные статьи"},
+	{"link": "/", "title": "Положения по бухгалтерскому учету"}
+]%}
+
+
+{% block pageClass %}page_home{% endblock %}
+{% block sidebar_left %}
+	{% include 'info.html' %}
+	{% include 'news.html' %}
+{% endblock %}
+{% block content %}
+	{% include 'breadcrumbs.html' %}
+	{% include 'article.html' %}
+	{% include 'reclame.html' %}
+{% endblock %}
+{% block sidebar_right %}
+	{% include 'small-reclame.html' %}
+	{% include 'new-articles.html' %}
+	{% include 'small-reclame.html' %}
+{% endblock %}
+
+{% block script %}
+	<script type="text/javascript" src="//vk.com/js/api/openapi.js?137"></script>
+	<script type="text/javascript">
+	    VK.Widgets.Group("vk_groups", {mode: 3, width: "220"}, 130148730);
+	</script>
+
+{% endblock %}

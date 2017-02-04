@@ -1,0 +1,19 @@
+<div class="content__block block">
+    <h3><img src="/images/cell.png">Счета бухгалтерского учета</h3>
+    <div class="costs">
+        <table class="costs__table">
+            {% for i in range(1, 48, 12) %}
+                <tr>
+                    {% for y in range(0, 12) %}
+
+                        <td>{{ (i + y) }}</td>
+                    
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+           
+         
+   

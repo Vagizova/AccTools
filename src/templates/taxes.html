@@ -1,0 +1,40 @@
+ {% set taxes = [
+    {"list": [
+        {"link": "#", "title": "Калькулятор"},
+        {"link": "#", "title": "Калькулятор"},
+        {"link": "#", "title": "Калькулятор"},
+        {"link": "#", "title": "Калькулятор"}
+    ]},
+    {"list": [
+        {"link": "#", "title": "Калькулятор"},
+        {"link": "#", "title": "Калькулятор"},
+        {"link": "#", "title": "Калькулятор"},
+        {"link": "#", "title": "Калькулятор"}
+    ]},
+    {"list": [
+        {"link": "#", "title": "Калькулятор"},
+        {"link": "#", "title": "Калькулятор"},
+        {"link": "#", "title": "Калькулятор"},
+        {"link": "#", "title": "Калькулятор"}
+    ]},
+    {"list": [
+        {"link": "#", "title": "Калькулятор"},
+        {"link": "#", "title": "Калькулятор"},
+        {"link": "#", "title": "Калькулятор"},
+        {"link": "#", "title": "Калькулятор"}
+    ]}
+
+]%}
+
+<div class="content__block block">
+    <h3><img src="/images/taxes.png">Налоги и взносы</h3>
+    <div class="list-objects">
+        {% for item in taxes %}
+            <ul class="list-objects__item">
+                {% for subitem in item.list %}
+                    <li><a href="{{ subitem.link }}">{{ subitem.title }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>       
+</div> 

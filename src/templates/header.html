@@ -1,3 +1,8 @@
+{% set rate = [
+    {"date": "28.01.2017", "time": "12:12:36", "usd":"33.62" , "eur": "40.50"}
+]%}
+
+
 <div class="header">
    <div class="header__container container">
    		<div class="docked">
@@ -7,7 +12,7 @@
 				<li class="docked__item"><img src="images/kontur2.png" class="docked__icon"><a href="">Обратная связь</a></li>
 			</ul>
 			<div class="unit"></div>
-			<a class="link" href="">Подписаться на новости</a>
+			<a class="button docked__button" href="">Подписаться на новости</a>
 		</div>
    		<div class="horizontal-menu horizontal-menu_header">
    			<ul class="horizontal-menu__list list_top">
@@ -15,8 +20,8 @@
 				<li class="horizontal-menu__item"><a href="">Налоги и отчетность</a></li>
 				<li class="horizontal-menu__item"><a href="">Особенности отчета по видам деятельности</a></li>
 				<li class="horizontal-menu__item"><a href="">МСФО</a></li>
-				<li class="horizontal-menu__item"><a href="">Полезные статьи</a></li>
-				<li class="horizontal-menu__item"><a href="">Контакты</a></li>
+				<li class="horizontal-menu__item"><a href="articles.html">Полезные статьи</a></li>
+				<li class="horizontal-menu__item"><a href="contacts.html">Контакты</a></li>
 			</ul>
    			<div class="horizontal-menu__panel panel">
    				<a href="/" class="logo">
@@ -26,8 +31,16 @@
   					<input type="search" name="" placeholder="Поиск" class="search__row row"/>
   					<input type="submit" name="" value="" class="search__row-button row-button"/>
 				</form>
+				<ul class="rate">
+				{% for item in rate %} 
+					<li class="rate__item">Сегодня: {{ item.date }}</li>
+					<li class="rate__item">{{ item.time }}</li>
+					<li class="rate__item">Курсы валют: USD ЦБ: {{ item.usd }}</li>
+					<li class="rate__item">EUR ЦБ: {{ item.eur }}</li>
+					{% endfor %}
+				</ul>
 				<div class="enter">
-					<a class="enter__button button">ВХОД</a>
+					<a class="enter__button button">ВХОД</a><br>
 					<a href="" class="enter__check-in">Регистрация</a><br>
 					<a href="" class="enter__check-in">Вспомнить пароль</a>
    				</div>

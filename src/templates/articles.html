@@ -1,0 +1,35 @@
+{% set article = [
+    {"title": "Положения по бухгалтерскому учету", "link": "article.html", "img":"/images/img.png" , "text": "Положения по бухгалтерскому учету являются основными нормативными документами, которые устанавливают правила и требования к организации учета, порядку раскрытия информации в бухгалтерской отчетности, а также основные финансовые показатели форм бухгалтерской отчетности."}
+    ,
+    {"title": "Положения по бухгалтерскому учету", "link": "article.html","img":"/images/img.png" , "text":"Положения по бухгалтерскому учету являются основными нормативными документами, которые устанавливают правила и требования к организации учета, порядку раскрытия информации в бухгалтерской отчетности, а также основные финансовые показатели форм бухгалтерской отчетности."}
+    
+
+]%}
+
+
+<div style="margin-bottom: 70px; border: 1px solid transparent"> <!-- вынести -->
+<div class="content__block block">
+    <form action="" method="post" class="select">
+        <input type="search" name="" placeholder="Поиск" class="select__row row"/>
+        <input type="submit" name="" value="" class="select__row-button row-button"/>
+    </form>
+    <h3><img src="/images/pen.png">Полезные статьи</h3>  
+    {% for item in article %}  
+        <div class="short-article">
+            <h5><a href="{{ item.link }}">{{ item.title }}</a></h5>
+            <img src={{ item.img }} class="short-article__img">
+            <p>{{ item.text }}</p>
+        </div>
+    {% endfor %}
+</div>
+<div class="article__social-network social-network">
+    <ul class="social-network__list">
+    <li class="social-network__item">Поделиться:</li>
+        <li class="social-network__item"><a href=""><img src="/images/vk-sm.png"></a></li>
+        <li class="social-network__item"><a href=""><img src="/images/facebook-sm.png"></a></li>
+        <li class="social-network__item"><a href=""><img src="/images/tweet-sm.png"></a></li>
+        <li class="social-network__item"><a href=""><img src="/images/odn-sm.png"></a></li>
+        <li class="social-network__item"><a href=""><img src="/images/google-sm.png"></a></li>
+    </ul>
+</div>
+</div>

@@ -5,10 +5,40 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block pageClass %}page_home{% endblock %}
+{% set breadcrumbs = [
+	{"link": "/", "title": "Главная"}
+]%}
+
+{% block sidebar_left %}
+	{% include 'info.html' %}
+	{% include 'directory.html' %}
+	{% include 'services.html' %}
+{% endblock %}
 
 {% block content %}
-	{% include 'basic.html' %}
+<div class="content__block block">
+                        <h2>Добро пожаловать<br/> на информационно-справочный портал<br/> «Инструменты Бухгалтера»!</h2>
+                        <p>Наша компания осуществляет свою деятельность в сфере бухгалтерского и налогового учета на условиях Внешнего обслуживания.</p>
+                        <p>Внешняя бухгалтерия в настоящее время очень популярна среди малого и среднего бизнеса из-за своей доступной стоимости по сравнению с зарплатами штатных бухгалтеров. Но очень важно выбрать надежного партнера, который будет для Вас опорой в Вашем бизнесе, и работая над своим бизнесом, вы не будете тратить свое драгоценное время на решение бухгалтерских вопросов, связанных с учетом и отчетностью в контролирующие органы.</p>
+                        <p>Мы понимаем, что Вы, как собственник, прежде всего озабочены текущей деятельностью своего бизнеса, и мы как никто ценим Ваше время и делаем все, что в наших силах, чтобы Вы не отвлекались от своих важных дел! </p>
+                    </div>
+
+               
+	{% include 'video.html' %}
+	{% include 'reclame.html' %}
+	{% include 'score.html' %}
+	{% include 'account.html' %}
+	{% include 'taxes.html' %}
+
 {% endblock %}
+
+{% block sidebar_right %}
+	{% include 'small-reclame.html' %}
+	{% include 'new-articles.html' %}
+	{% include 'small-reclame.html' %}
+	<div id="datepicker"></div>
+{% endblock %}
+
 
 {% block script %}
 	<script type="text/javascript" src="//vk.com/js/api/openapi.js?137"></script>
