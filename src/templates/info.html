@@ -85,8 +85,11 @@
 
 <div class="block block__info">
     <h3><img src="images/info.png">Информация</h3>
-    <div id="accordion" class="accordion">
+    
+    <ul id="accordion" class="accordion">
+        
         {% for item in info %}
+        <li>
             <div class="accordion__item"><h4>{{ item.title }}</h4></div>
             <div class="accordion__list">
                 <ul class="accordion__catalog catalog">
@@ -95,6 +98,8 @@
                     {% endfor %}
                 </ul>
             </div>
+        </li>
         {% endfor %}
-    </div>
+    </ul>
+    
 </div>
